@@ -20,6 +20,7 @@ public class Tema {
 	@Size(min = 3 ,max = 255,message = "O texto deve ter no minímo 3 caracteres e no máximo 255 caracteres")
 	private String descricao;
 	
+	@Size(min = 3 ,max = 255,message = "A palavra chave deve ter no minímo 3 caracteres e no máximo 255 caracteres")
 	private String palavra_chave;
 	
 	@NotNull
