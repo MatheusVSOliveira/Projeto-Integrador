@@ -11,20 +11,20 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "tb_temas")
 public class Tema {
-	
+
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private long id;
-	
+
 	@NotNull(message = "A descrição não foi adicionada")
-	@Size(min = 3 ,max = 255,message = "O texto deve ter no minímo 3 caracteres e no máximo 255 caracteres")
+	@Size(min = 3, max = 255, message = "O texto deve ter no minímo 3 caracteres e no máximo 255 caracteres")
 	private String descricao;
-	
-	@Size(min = 3 ,max = 255,message = "A palavra-chave deve ter no minímo 3 caracteres e no máximo 255 caracteres")
+
+	@Size(min = 3, max = 255, message = "A palavra-chave deve ter no minímo 3 caracteres e no máximo 255 caracteres")
 	private String palavra_chave;
-	
+
 	@NotNull
-	@Size(min = 3,max = 255,message = "O nome do tema deve ter no minímo 3 caracteres e no máximo 255 cracteres")
+	@Size(min = 3, max = 255, message = "O nome do tema deve ter no minímo 3 caracteres e no máximo 255 cracteres")
 	private String nome;
 
 	public long getId() {
