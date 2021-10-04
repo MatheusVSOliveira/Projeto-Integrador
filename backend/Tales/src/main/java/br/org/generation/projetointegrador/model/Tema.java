@@ -23,7 +23,7 @@ public class Tema {
 	@Size(min = 3, max = 255, message = "A palavra-chave deve ter no minímo 3 caracteres e no máximo 255 caracteres")
 	private String palavra_chave;
 
-	@NotNull
+	@NotNull(message = "A nome do tema não foi adicionada")
 	@Size(min = 3, max = 255, message = "O nome do tema deve ter no minímo 3 caracteres e no máximo 255 cracteres")
 	private String nome;
 
