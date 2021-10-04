@@ -33,16 +33,16 @@ public class TemaController {
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<Tema> getById(@PathVariable Long Id) {
+	public ResponseEntity<Tema> getById(@PathVariable Long id) {
 
-		return temaRepository.findById(Id).map(resp -> ResponseEntity.ok(resp))
+		return temaRepository.findById(id).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
 
-	@GetMapping("/descricao/{descricao}")
-	public ResponseEntity<List<Tema>> getByNome(@PathVariable String descricao) {
+	@GetMapping("/nome/{nome}")
+	public ResponseEntity<List<Tema>> getByNome(@PathVariable String nome) {
 
-		return ResponseEntity.ok(temaRepository.findAllByNomeContainingIgnoreCase(descricao));
+		return ResponseEntity.ok(temaRepository.findAllByNomeContainingIgnoreCase(nome));
 	}
 
 	@PostMapping
