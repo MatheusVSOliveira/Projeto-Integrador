@@ -6,5 +6,5 @@ import br.org.generation.projetointegrador.model.Tema;
 
 public interface TemaRepository extends JpaRepository<Tema, Long> {
 
-	public List<Tema> findAllByNomeContainingIgnoreCase(String descricao);
+	public List<Tema> findAllByNomeContainingIgnoreCase(String nome);
 }
