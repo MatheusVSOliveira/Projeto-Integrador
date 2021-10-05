@@ -16,8 +16,9 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name="tb_usuario")
+@Table(name="tb_usuarios")
 public class Usuario {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -32,7 +33,7 @@ public class Usuario {
 	private String nome;
 	
 	@NotNull
-	@Size(min=6)
+	@Size(min=8)
 	private String senha;
 	
 	@NotNull

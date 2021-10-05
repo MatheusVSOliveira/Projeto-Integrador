@@ -31,7 +31,7 @@ public class Tema {
 	private String descricao;
 
 	@Size(min = 3, max = 255, message = "A palavra-chave deve ter no minímo 3 caracteres e no máximo 255 caracteres")
-	private String palavra_chave;
+	private String palavraChave;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
@@ -53,12 +53,12 @@ public class Tema {
 		this.descricao = descricao;
 	}
 
-	public String getPalavra_chave() {
-		return palavra_chave;
+	public String getPalavraChave() {
+		return palavraChave;
 	}
 
-	public void setPalavra_chave(String palavra_chave) {
-		this.palavra_chave = palavra_chave;
+	public void setPalavraChave(String palavraChave) {
+		this.palavraChave = palavraChave;
 	}
 
 	public String getNome() {
