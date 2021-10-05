@@ -10,6 +10,7 @@ CREATE TABLE `Usuario` (
 	`id` bigint NOT NULL AUTO_INCREMENT,
 	`usuario` varchar(255) NOT NULL,
 	`nome` varchar(255) NOT NULL,
+	`tipoUsuario` varchar(255) NOT NULL,
 	`senha` varchar(50) NOT NULL,
 	PRIMARY KEY (`id`)
 );
