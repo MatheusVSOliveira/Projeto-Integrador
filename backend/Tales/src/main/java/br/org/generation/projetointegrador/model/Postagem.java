@@ -27,6 +27,10 @@ public class Postagem {
 	@Size(max=255)
 	private String titulo;
 	
+	//@NotNull
+	@Size(max = 1000)
+	private String texto;
+
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data=new java.sql.Date(System.currentTimeMillis());
 	
@@ -88,6 +92,13 @@ public class Postagem {
 		this.usuario = usuario;
 	}
 	
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
 
 	
 	

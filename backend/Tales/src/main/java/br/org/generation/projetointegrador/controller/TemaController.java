@@ -19,7 +19,7 @@ import br.org.generation.projetointegrador.model.Tema;
 import br.org.generation.projetointegrador.repository.TemaRepository;
 
 @RestController
-@RequestMapping("/tema")
+@RequestMapping("/temas")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TemaController {
 
