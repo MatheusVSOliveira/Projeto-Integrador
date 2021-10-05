@@ -21,6 +21,10 @@ public class Tema {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private long id;
+	
+	@NotNull(message = "A nome do tema não foi adicionada")
+	@Size(min = 3, max = 255, message = "O nome do tema deve ter no minímo 3 caracteres e no máximo 255 cracteres")
+	private String nome;
 
 	@NotNull(message = "A descrição não foi adicionada")
 	@Size(min = 3, max = 255, message = "O texto deve ter no minímo 3 caracteres e no máximo 255 caracteres")
@@ -28,10 +32,6 @@ public class Tema {
 
 	@Size(min = 3, max = 255, message = "A palavra-chave deve ter no minímo 3 caracteres e no máximo 255 caracteres")
 	private String palavra_chave;
-
-	@NotNull(message = "A nome do tema não foi adicionada")
-	@Size(min = 3, max = 255, message = "O nome do tema deve ter no minímo 3 caracteres e no máximo 255 cracteres")
-	private String nome;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
