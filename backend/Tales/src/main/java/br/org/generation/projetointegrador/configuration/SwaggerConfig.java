@@ -48,7 +48,7 @@ public class SwaggerConfig {
 	private static Contact contact() {
 	return new Contact("Tales",
 	"https://github.com/samanthaccosta/Projeto-Integrador",
-	"samanthaccosta1@hotmail.com jprocharodrigues121@gmail.com larissainaciom.dacosta@gmail.com richardnarumi3@gmail.com matheusvsoliveira61@gmail.com");
+	"projetointegradortales@gmail.com");
 	}
 	private static List<Response> responseMessage() {
 	return new ArrayList<Response>() {
