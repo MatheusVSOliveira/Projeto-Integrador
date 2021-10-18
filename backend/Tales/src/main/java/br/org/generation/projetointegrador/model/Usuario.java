@@ -15,6 +15,8 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 @Table(name="tb_usuarios")
 public class Usuario {
@@ -23,8 +25,9 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull
-	@Email
+	@ApiModelProperty(example = "email@email.com.br")
+	@NotNull(message = "O atributo Usuário é Obrigatório!")
+	@Email(message = "O atributo Usuário deve ser um email válido!")
 	@Size(max=255)
 	private String usuario;
 	
