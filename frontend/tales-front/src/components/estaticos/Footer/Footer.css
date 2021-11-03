@@ -1,31 +1,35 @@
-.box1{
+.box1 {
     background-color: #5890A6;
 }
 
-.box2{
+.box2 {
     background-color: #2D6673;
 }
 
-.text-decoration-none{
+.text-decoration-none {
     text-decoration: none;
 }
 
-.textos{
+.textos {
     color: white;
 }
 
-.textos-1{
+.textos-1 {
     color: white;
     margin-top: 15px !important;
     margin-left: 440px !important;
 }
 
-.tales{
-    font-family: Quintessential !important ;
+.tales {
+    font-family: Quintessential !important;
     color: white;
 }
 
 .logo-footer {
     width: 168px;
     height: 64px;
- } 
+}
+
+.cursor-p {
+    cursor: pointer;
+}

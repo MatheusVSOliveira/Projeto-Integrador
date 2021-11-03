@@ -12,7 +12,7 @@ function Login() {
                     <Box paddingX="20px" border={1} borderRadius={9} className="boxlogin1">
                         <Box>
                             <form>
-                                <img src="https://i.imgur.com/lkhAgRt.png" alt="" className="tamanho-logo"/>
+                                <img src="https://i.imgur.com/lkhAgRt.png" alt="" className="tamanho-logo" />
                                 <Typography align="left">Usuario</Typography>
                                 <TextField id="usuario" label="digite seu email" variant="outlined" name="usuario" fullWidth className="campo-de-texto" />
                                 <Typography align="left">Senha</Typography>

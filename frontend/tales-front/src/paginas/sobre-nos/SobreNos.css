@@ -1,53 +1,53 @@
-.caixaPrincipal{
-    background-image: linear-gradient(to bottom,#d7e7ed, white ) 
+.caixaPrincipal {
+    background-image: linear-gradient(to bottom, #d7e7ed, white)
 }
 
-.caixa1{
-   background-color: #a0c9d9; 
-   margin-top: 50px; 
-   padding: 10px; 
-   border-radius: 20px;
-   box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.363);
+.caixa1 {
+    background-color: #a0c9d9;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.363);
 
 }
 
-.caixa2{ 
-    margin-top: 50px; 
- }
+.caixa2 {
+    margin-top: 50px;
+}
 
-.texto{
-    text-align:justify;
- }
+.texto {
+    text-align: justify;
+}
 
-.img{
+.img {
     background-image: url(https://i.imgur.com/L7RjlyZ.png);
     background-repeat: no-repeat;
-    background-size:cover; 
-    background-position:center;
-    min-height:45vh; 
+    background-size: cover;
+    background-position: center;
+    min-height: 45vh;
 }
 
-.img2{
+.img2 {
     background-image: url(https://i.imgur.com/Pg1sT3s.png);
     background-repeat: no-repeat;
-    background-size:cover; 
-    background-position:center;
-    min-height:50vh; 
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
 }
 
-.img3{
+.img3 {
     background-image: url(https://i.imgur.com/Jz2soVv.png);
     background-repeat: no-repeat;
-    background-size:cover; 
-    background-position:center;
-    min-height:50vh; 
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
 }
 
-.img4{
+.img4 {
     background-image: url(https://i.imgur.com/vFXIvMv.png);
     background-repeat: no-repeat;
-    width:60vh; 
-    min-height:60vh; 
-    background-size:cover; 
-    background-position:center;
+    width: 60vh;
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center;
 }
