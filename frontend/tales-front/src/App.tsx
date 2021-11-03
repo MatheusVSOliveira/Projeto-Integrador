@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './paginas/login/Login';
 import Home from './paginas/home/Home';
 import SobreNos from './paginas/sobre-nos/SobreNos';
-import Navbar from './components/estaticos/navbar/Navbar';
+import Navbar from './components/estaticos/navbar/NavBar';
 import Footer from './components/estaticos/footer/Footer';
 
 function App() {
