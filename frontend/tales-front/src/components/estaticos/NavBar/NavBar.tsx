@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 
-function NavBar() {
+function Navbar() {
     return (
         <>
             <AppBar position="static" className="cor-navBar">
@@ -42,4 +42,4 @@ function NavBar() {
     )
 }
 
-export default NavBar
+export default Navbar
