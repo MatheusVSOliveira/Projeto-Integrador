@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 import './Footer.css';
 
 import { Typography, Box, Grid } from '@material-ui/core';
@@ -7,26 +6,26 @@ import { Typography, Box, Grid } from '@material-ui/core';
 function Footer() {
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Grid alignItems="center" item xs={12}>
-                    <Box className="box">
-                        <Box display="flex" >
-                        <Typography variant="h3" align="left"  justifyContent="left" className="tales">Tales</Typography>
-                        </Box>
-                        <Box display="flex" justifyContent="center" className="box1" >
-                            <Typography variant="h5" align="center" className="textos">Fale conosco</Typography>
-                        </Box>
-                    </Box>
+            <Grid container  >
+                <Grid item xs={12} >
+                    <Box display="flex" flexDirection="row" className="box1"  >
 
+                        <img src="https://i.imgur.com/kjX8SxB.png" alt="" className="logo-footer" />
+                        <Typography variant="h5" className="textos-1 cursor-p" >Fale conosco</Typography>
+
+                    </Box>
+                </Grid>
+                <Grid item xs={12}>
                     <Box className="box2">
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" className="textos"> Todos os direitos reservados © </Typography>
+                            <Typography variant="subtitle2" align="center" className="textos"> Todos os direitos reservados Tales© </Typography>
                         </Box>
                     </Box>
                 </Grid>
+
             </Grid>
         </>
     )
 }
 
-export default Footer;
+export default Footer

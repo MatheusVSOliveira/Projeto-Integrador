@@ -1,0 +1,37 @@
+.colorlogin-background {
+    background-color: #A0C9D9;
+    min-height: 100vh;
+}
+
+.boxlogin1 {
+    background-color: white;
+    border-color: #5b5c57 !important;
+}
+
+.tamanho-logo {
+    width: 300px !important;
+    height: 130px !important;
+    margin-top: 5px;
+}
+
+.campo-de-texto {
+    margin-bottom: 20px !important;
+}
+
+.botao {
+    background-color: #5890A6 !important;
+    border-radius: 5px !important;
+}
+
+.bold {
+    font-weight: bold !important;
+    color: black !important;
+}
+
+.cursor {
+    cursor: pointer !important;
+}
+
+.textDecoration {
+    text-decoration: none;
+}
