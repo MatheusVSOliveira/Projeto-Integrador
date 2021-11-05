@@ -8,6 +8,7 @@ import Home from './paginas/home/Home';
 import SobreNos from './paginas/sobre-nos/SobreNos';
 import Navbar from './components/estaticos/navbar/NavBar';
 import Footer from './components/estaticos/footer/Footer';
+import CadastroUsuario from './paginas/cadastrousuario/CadastroUsuario';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
 
           <Route path="/sobre-nos">
             <SobreNos/>
+          </Route>
+          <Route path="/cadastrousuario">
+          <CadastroUsuario />
           </Route>
         </div>
       </Switch>

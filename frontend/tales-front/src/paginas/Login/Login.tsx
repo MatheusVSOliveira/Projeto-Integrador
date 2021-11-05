@@ -1,34 +1,76 @@
-import React from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react'
+import { Box, Grid, Typography, TextField, Button } from '@material-ui/core'
+import { Link, useHistory } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
+import { login } from '../../services/Service';
 import './Login.css';
+import UserLogin from '../../models/UserLogin';
 
-import { Grid, Box, Typography, TextField, Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+
 
 function Login() {
+
+    let history = useHistory();
+    const [token, setToken] = useLocalStorage('token');
+    const [userLogin, setUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            usuario: '',
+            senha: '',
+            token: ''
+        }
+    )
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+        setUserLogin({
+            ...userLogin,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    useEffect(() => {
+        if (token != '') {
+            history.push('/home')
+        }
+    }, [token])
+
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault();
+        try {
+            await login(`/usuarios/logar`, userLogin, setToken)
+            alert('Usuário logado com sucesso!')
+        } catch (error) {
+            alert('Dados dos usuários inconsistentes. Erro ao logar!')
+        }
+        /*console.log('userLogin: ' + Object.values(userLogin));*/
+    }
+
     return (
         <div>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="colorlogin-background">
                 <Grid item xs={3} alignItems="center">
                     <Box paddingX="20px" border={1} borderRadius={9} className="boxlogin1">
                         <Box>
-                            <form>
+                            <form onSubmit={onSubmit}>
                                 <img src="https://i.imgur.com/lkhAgRt.png" alt="" className="tamanho-logo" />
                                 <Typography align="left">Usuario</Typography>
-                                <TextField id="usuario" label="digite seu email" variant="outlined" name="usuario" fullWidth className="campo-de-texto" />
+                                <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="usuario" label="digite seu email" variant="outlined" name="usuario" fullWidth className="campo-de-texto" />
                                 <Typography align="left">Senha</Typography>
-                                <TextField id="senha" label="digite sua senha" variant="outlined" name="senha" type="password" fullWidth className="campo-de-texto" />
+                                <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="digite sua senha" variant="outlined" name="senha" type="password" fullWidth className="campo-de-texto" />
                             </form>
                         </Box>
                         <Box marginTop={1} textAlign="center">
-                            <Link to='/home' className="textDecoration">
+                            <form onSubmit={onSubmit}> 
                                 <Button type="submit" variant="contained" className="botao">
                                     Entrar
                                 </Button>
-                            </Link>
+                            </form>
                             <Box display="flex" justifyContent="center" marginTop={2}>
                                 <Box>
                                     <Typography variant="subtitle1" gutterBottom align="center">Não possui um cadastro</Typography>
+                                    <Link to='/cadastrousuario'>
                                     <Typography variant="subtitle1" gutterBottom align="center" className="bold cursor">Cadastrar-se</Typography>
+                                    </Link> 
                                 </Box>
                             </Box>
                         </Box>
