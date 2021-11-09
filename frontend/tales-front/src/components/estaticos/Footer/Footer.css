@@ -1,5 +1,5 @@
 .box1 {
-    background-color: #5890A6;
+    background-color: #224a59;
 }
 
 .box2 {
@@ -17,7 +17,7 @@
 .textos-1 {
     color: white;
     margin-top: 15px !important;
-    margin-left: 440px !important;
+    width: 82%;
 }
 
 .tales {
@@ -28,6 +28,7 @@
 .logo-footer {
     width: 168px;
     height: 64px;
+    justify-content: center;
 }
 
 .cursor-p {

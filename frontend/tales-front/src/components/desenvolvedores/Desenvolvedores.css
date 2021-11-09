@@ -1,0 +1,12 @@
+
+.logo-dev{
+    display:flex; 
+    align-items: center; 
+    justify-content: center;
+    margin:auto;
+}
+
+.colorIcon{
+    color: #224a59 !important;
+    width: 1.5em !important
+}

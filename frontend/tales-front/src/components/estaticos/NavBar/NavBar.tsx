@@ -2,8 +2,19 @@ import React from 'react'
 import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import './NavBar.css'
+import useLocalStorage from 'react-use-localstorage';
+import { useHistory } from 'react-router-dom';
 
 function NavBar() {
+
+    const [token, setToken] = useLocalStorage('token') 
+    let history = useHistory(); 
+
+    function goLogout() {
+        setToken('')
+        alert('Usuário deslogado')
+        history.push('/login')
+    }
     return (
         <>
             <AppBar position="static" className="cor-navBar">
@@ -27,13 +38,11 @@ function NavBar() {
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to='/login' className="text-decoration-none">
-                            <Box mx={1} className="cursor">
-                                <Typography variant="h6" color="inherit">
-                                    Logout
-                                </Typography>
-                            </Box>
-                        </Link>
+                        <Box mx={1} className='cursor' onClick={goLogout}>
+                            <Typography variant="h6" color="inherit"> 
+                                logout
+                            </Typography>
+                        </Box>
                     </Box>
 
                 </Toolbar>
