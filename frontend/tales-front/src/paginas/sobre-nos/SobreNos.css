@@ -63,7 +63,7 @@
     /*background-size: cover;*/
     background-position: right;
     min-height: 50vh;
-    width: 55vh; 
+    width: 45%; 
     
 }
 
@@ -73,7 +73,7 @@
     background-size: cover;
     background-position: center;
     min-height: 53vh;
-    width: 80vh; 
+    width: 40%; 
 }
 
 .img3 {
