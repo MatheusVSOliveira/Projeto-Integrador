@@ -7,13 +7,13 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 1410px; 
+    width: 74%; 
     background-color: #ffffff;
     padding: 10px;
     border-radius: 20px;
     box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.050);
     margin-top: 50px;
-    
+
 
 }
 
@@ -22,7 +22,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 1410px; 
+    width: 74%; 
     padding: 10px;
     border-radius: 20px;
     margin-top: 30px;
@@ -33,7 +33,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 1410px; 
+    width: 74%; 
     background-color: #ffffff;
     padding: 10px;
     border-radius: 20px;
@@ -45,7 +45,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 1410px; 
+    width: 74%; 
     padding: 10px;
     border-radius: 20px;
     margin-top: 30px;
@@ -58,37 +58,42 @@
 }
 
 .img {
-    background-image: url(https://i.imgur.com/lmz7tPu.png);
+    background-image: url(https://i.imgur.com/Eder0sS.png?4); 
     background-repeat: no-repeat;
-    /*background-size: cover;*/
-    background-position: right;
+    background-position: center;
     min-height: 50vh;
-    width: 45%; 
-    
+    width: 50%; 
+
 }
 
 .img2 {
-    background-image: url(https://i.imgur.com/vfWngqB.png);
+    background-image: url(https://i.imgur.com/26QE9aj.png?1);
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
-    min-height: 53vh;
-    width: 40%; 
+    background-size: cover;
+    min-height: 50vh;
+    width: 50%;
+    padding: 5%; 
+
+
 }
 
 .img3 {
     background-image: url(https://i.imgur.com/uDLMjiE.png);
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 52vh;
-    width: 65vh; 
+    background-size: cover;
+    min-height: 50vh;
+    width: 35%; 
+
 }
 
 .img4 {
-    background-image: url(https://i.imgur.com/BfNwqGz.png);
+    background-image: url(https://i.imgur.com/I1O5fGZ.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 60vh;
-    width: 65vh;   
+    min-height: 50vh;
+    width: 50%;
+    padding: 5%;
 }

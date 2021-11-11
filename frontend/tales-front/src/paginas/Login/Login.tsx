@@ -50,9 +50,9 @@ function Login() {
             <Grid container direction="row" justifyContent="center" alignItems="center" className="colorlogin-background">
                 <Grid item xs={3} alignItems="center">
                     <Box paddingX="20px" border={1} borderRadius={9} className="boxlogin1">
-                        <Box>
+                        <Box> 
                             <form onSubmit={onSubmit}>
-                                <img src="https://i.imgur.com/lkhAgRt.png" alt="" className="tamanho-logo" />
+                                <img src="https://i.imgur.com/lkhAgRt.png" alt="" className="tamanho-logo-login"/>   
                                 <Typography className='txtFieldColorLogin' align="left">Usuario</Typography>
                                 <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="usuario" label="digite seu email" variant="outlined" name="usuario" fullWidth className="campo-de-texto" />
                                 <Typography className='txtFieldColorLogin'align="left">Senha</Typography>
@@ -81,4 +81,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Login;

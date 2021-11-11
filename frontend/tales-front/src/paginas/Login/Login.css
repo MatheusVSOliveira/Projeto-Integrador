@@ -12,12 +12,11 @@
     border-color: #5b5c57 !important;
 }
 
-.tamanho-logo {
-    width: 300px !important;
-    height: 130px !important;
+.tamanho-logo-login {
+    width: 70% !important;
+    height: 45% !important;
     margin-top: 5px;
 }
-
 .campo-de-texto {
     margin-bottom: 20px !important;
 }

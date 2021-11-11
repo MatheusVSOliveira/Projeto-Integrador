@@ -1,1 +1,9 @@
-import React from 'react'
+interface Tema{
+    id: number;
+    nome: string;
+    descricao: string; 
+    
+    
+    }
+    
+    export default Tema;
