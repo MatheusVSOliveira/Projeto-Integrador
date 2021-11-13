@@ -1,9 +1,10 @@
 import React, { useState, useEffect, ChangeEvent } from 'react'
-import { Container, Typography, TextField, Button } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Grid, Box } from "@material-ui/core"
 import { useHistory, useParams } from 'react-router-dom'
 import { buscaId, post } from '../../../services/Service';
 import useLocalStorage from 'react-use-localstorage';
 import Tema from '../../../models/Tema';
+import './CadastroTema.css';
 
 
 function CadastroTema() {
@@ -14,7 +15,7 @@ function CadastroTema() {
         id: 0,
         nome: '',
         descricao: ''
-        
+
     })
 
     useEffect(() => {
@@ -61,7 +62,7 @@ function CadastroTema() {
             })
             alert('Tema cadastrado com sucesso');
         }
-
+        back()
     }
 
     function back() {
@@ -70,16 +71,24 @@ function CadastroTema() {
 
 
     return (
-        <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={tema.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="nome" label="nome" variant="outlined" name="nome" margin="normal" fullWidth />
-                <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
-                <Button type="submit" variant="contained" color="primary">
-                    Finalizar
-                </Button>
-            </form>
-        </Container>
+        <Grid container xs={12} justifyContent="center" alignItems="center" className='planoDeFundo'>
+
+            <Grid item xs={5}>
+                <Box className="containerCadastroTema" >
+                    <form onSubmit={onSubmit}>
+                        <Typography variant="h3" color="textSecondary" component="h1" align="center" className="text1 margem-descricao-tema" >Formulário de cadastro tema</Typography>
+                        <Typography variant="h6" className="txtFieldColor-post" marginTop="10px" align="left">Titulo</Typography>
+                        <TextField className="caixa-de-texto-fundo margem-descricao-tema" value={tema.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="nome do tema" label="nome do tema" variant="outlined" name="nome do tema" fullWidth />
+                        <Typography variant="h6" className="txtFieldColor-post" marginTop="10px" align="left">Descrição</Typography>
+                        <TextField className="caixa-de-texto-fundo margem-descricao-tema" value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descrição" variant="outlined" name="descricao" fullWidth />
+                        <Button type="submit" variant="contained" color="primary">
+                            Cadastrar
+                        </Button>
+                    </form>
+                </Box>
+            </Grid>
+
+        </Grid>
     )
 }
 

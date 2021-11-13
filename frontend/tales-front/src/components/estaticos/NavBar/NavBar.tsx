@@ -45,6 +45,20 @@ function NavBar() {
                                 </Typography>
                             </Box>
                         </Link>
+                        <Link to="/temas" className="text-decoration-none">
+                            <Box mx={1} className="cursor">
+                                <Typography variant="h6" color="inherit">
+                                    Temas
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Link to="/formularioTema" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit">
+                                    Cadastrar tema
+                                </Typography>
+                            </Box>
+                        </Link>
                         <Box mx={1} className='cursor' onClick={goLogout}>
                             <Typography variant="h6" color="inherit"> 
                                 Sair
@@ -58,4 +72,4 @@ function NavBar() {
     )
 }
 
-export default NavBar
+export default NavBar;

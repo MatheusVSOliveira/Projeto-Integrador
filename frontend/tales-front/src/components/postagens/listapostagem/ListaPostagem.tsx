@@ -13,7 +13,7 @@ function ListaPostagem() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            alert("VocÃª precisa estar logado")
             history.push("/login")
 
         }
@@ -35,36 +35,36 @@ function ListaPostagem() {
 
     return (
         <div>
-            <Box width="100%" className="fundo-listap">
+            <Grid className="fundo-listap">
                 {
                     posts.map(post => (
-                        <Grid container direction='row' alignItems='center' justifyContent='center'>
-                            <Box className='caixa2' >
-                                <Card variant="outlined">
-                                    <CardContent>
-                                        <Typography gutterBottom>
-
-                                        </Typography>
-                                        <Typography variant="h5" component="h2">
-                                            {post.titulo}
-                                        </Typography>
-                                        <Typography variant="body2" component="p">
-                                            {post.texto}
-                                        </Typography>
-                                        <img src="{post.imagemUrl}" alt="" width="80%"/>
-                                        <Typography variant="body2" component="p">
+                        <Grid container >
+                            <Grid item xs={12} display='flex' justifyContent='center' alignItems='center' >
+                                <Box className='containerPost'>
+                                    <Box alignItems='center' justifyContent='center' width='100%'>
+                                        <Typography variant="body2" textAlign='justify' >
                                             {post.tema?.descricao}
                                         </Typography>
-                                    </CardContent>
-                                </Card>
-                            </Box>
+                                        <Typography variant="h5" gutterBottom color='#224a59' align='left' justifyContent='center' textAlign='justify'>
+                                            {post.titulo}
+                                        </Typography>
+                                        
+                                        <Typography variant="h6" className='txtcolor' align='left' component="p" >
+                                            {post.texto}
+                                        </Typography>
+                                        
+                                    </Box>
+                                    <Box>
+                                        <img src={post.imagemUrl} alt="" width="500px" />
+                                    </Box>
+                                </Box>
+                            </Grid>
                         </Grid>
                     ))
                 }
-            </Box>
-
+            </Grid>
         </div>
     )
 }
 
-export default ListaPostagem
+export default ListaPostagem;
