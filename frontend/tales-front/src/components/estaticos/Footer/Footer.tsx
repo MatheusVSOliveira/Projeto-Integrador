@@ -16,7 +16,7 @@ function Footer() {
                 <Grid item xs={12}>
                     <Box className="box2">
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" className="textos"> Todos os direitos reservados Tales© </Typography>
+                            <Typography variant="subtitle2" align="center" className="textos"> Todos os direitos reservados Tales© </Typography> 
                         </Box>
                     </Box>
                 </Grid>

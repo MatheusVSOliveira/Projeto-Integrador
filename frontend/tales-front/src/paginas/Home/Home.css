@@ -1,18 +1,6 @@
-.imgdev {
-    width: 200px !important;
-    height: 200px !important;
-    margin-top: 30px;
+
+.fundo-home {
+    background-color: #DFECF0 !important;
+    min-width: 100vh;
 }
 
-.imgprincipal {
-    width: 500px !important;
-    height: 500px !important;
-}
-
-.fundo {
-    background-color: white !important;
-}
-
-.margem-dev {
-    margin-top: 50px !important;
-}

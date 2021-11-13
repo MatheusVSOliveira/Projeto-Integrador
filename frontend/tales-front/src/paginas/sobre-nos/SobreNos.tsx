@@ -4,75 +4,78 @@ import './SobreNos.css';
 import Desenvolvedores from '../../components/desenvolvedores/Desenvolvedores';
 
 
+
 function SobreNos() {
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center' className='caixaPrincipal'>
-            <Grid container direction='row' alignItems='center' xs={9} className='caixa1'>
-                <Grid xs={6}>
-                    <Box className='container'>
-                        <Typography variant="h3" gutterBottom color='#224a59' align='center' >
-                            Sobre nós
+        <Grid container className='caixaPrincipal'>
+            <Grid item xs={12} display='flex' justifyContent='center' alignItems='center' >
+                <Box className='container1'>
+                    <Box alignItems='center' justifyContent='center' width='45%'> 
+                        <Typography variant="h3" gutterBottom color='#224a59' align='center' justifyContent='center'>
+                            Sobre nÃ³s
                         </Typography>
-                        <Typography variant="h5" className='txtcolor'>
+                        <Typography variant="h5" className='txtcolor' align='center' textAlign='justify'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti esse veniam similique.
                             Rem beatae at labore repudiandae nostrum laboriosam ipsum itaque? Deserunt numquam molestiae
                             quisquam voluptates, tenetur corporis quidem!
                         </Typography>
                     </Box>
-                </Grid>
-                <Grid xs={6} className='img'></Grid>
+                    <Box width='45%' className='img'> </Box>
+                </Box>
             </Grid>
 
-            <Grid container direction='row' alignItems='center' xs={9} className='caixa2'>
-                <Grid xs={6} className='img2'> </Grid>
-                <Grid xs={6}>
-                    <Box className='container'>
-                        <Typography variant="h3" gutterBottom color='#224a59' align='center'>
+            <Grid item xs={12} display='flex' justifyContent='center' alignItems='center'>
+                <Box className='container2'>
+                    <Box width='45%' className='img2'></Box>
+                    <Box alignItems='center' justifyContent='center' width='45%'>
+                        <Typography variant="h3" gutterBottom color='#224a59' align='center' justifyContent='center'>
                             ODS 6
                         </Typography>
-                        <Typography variant="h5" className='txtcolor'>
+                        <Typography variant="h5" className='txtcolor' align='center' textAlign='justify'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti esse veniam similique.
                             Rem beatae at labore repudiandae nostrum laboriosam ipsum itaque? Deserunt numquam molestiae
                             quisquam voluptates, tenetur corporis quidem!
                         </Typography>
                     </Box>
-                </Grid>
+                </Box>
             </Grid>
 
-            <Grid container direction='row' alignItems='center' xs={9} className='caixa3'>
-                <Grid xs={6}>
-                    <Box className='container'>
-                        <Typography variant="h3" gutterBottom color='#224a59' align='center'>
+            <Grid item xs={12} display='flex' justifyContent='center' alignItems='center'>
+                <Box className='container3'>
+                    <Box alignItems='center' justifyContent='center' width="45%">
+                        <Typography variant="h3" gutterBottom color='#224a59' align='center' justifyContent='center'>
                             Objetivo
                         </Typography>
-                        <Typography variant="h5" className='txtcolor'>
+                        <Typography variant="h5" className='txtcolor' align='center' textAlign='justify'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti esse veniam similique.
                             Rem beatae at labore repudiandae nostrum laboriosam ipsum itaque? Deserunt numquam molestiae
                             quisquam voluptates, tenetur corporis quidem!
                         </Typography>
                     </Box>
-                </Grid>
-                <Grid xs={6} className='img3'></Grid>
+                    <Box width="45%" className='img3'></Box>
+                </Box>
             </Grid>
 
-            <Grid container direction='row' alignItems='center' xs={9} className='caixa4'>
-                <Grid xs={6} className='img4'> </Grid>
-                <Grid xs={6}>
-                    <Box className='container'>
-                        <Typography variant="h3" gutterBottom color='#224a59' align='center'>
+            <Grid item xs={12} display='flex' justifyContent='center' alignItems='center'>
+                <Box className='container4'>
+                    <Box width='45%' className='img4'></Box>
+                    <Box alignItems='center' justifyContent='center' width='45%'>
+                        <Typography variant="h3" gutterBottom color='#224a59' align='center' justifyContent='center'>
                             ???
                         </Typography>
-                        <Typography variant="h5" className='txtcolor'>
+                        <Typography variant="h5" className='txtcolor' align='center' textAlign='justify'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti esse veniam similique.
                             Rem beatae at labore repudiandae nostrum laboriosam ipsum itaque? Deserunt numquam molestiae
                             quisquam voluptates, tenetur corporis quidem!
                         </Typography>
                     </Box>
-                </Grid>
+                </Box>
             </Grid>
-            <Desenvolvedores />
+            <Grid item xs={12} display='flex' justifyContent='center' alignItems='center'> 
+                <Desenvolvedores />
+            </Grid>
         </Grid>
     )
 }
 
-export default SobreNos
+export default SobreNos;

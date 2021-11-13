@@ -9,6 +9,10 @@ import SobreNos from './paginas/sobre-nos/SobreNos';
 import Navbar from './components/estaticos/navbar/NavBar';
 import Footer from './components/estaticos/footer/Footer';
 import CadastroUsuario from './paginas/cadastrousuario/CadastroUsuario';
+import CadastroTema from './components/temas/cadastrotema/CadastroTema';
+import ListaTema from './components/temas/listatema/ListaTema';
+import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
+import CadastroPost from './components/postagens/cadastropost/CadastroPost';
 
 function App() {
   return (
@@ -35,9 +39,28 @@ function App() {
           <Route path="/cadastrousuario">
           <CadastroUsuario />
           </Route>
+
+          <Route path='/temas'>
+            <ListaTema />
+          </Route>
+          <Route path='/posts'>
+            <ListaPostagem />
+          </Route>
+
+          <Route exact path='/formularioPostagem'>
+            <CadastroPost />
+          </Route>
+          <Route exact path='/formularioPostagem/:id'>
+            <CadastroPost />
+          </Route>
+          <Route exact path='/formularioTema'>
+            <CadastroTema />
+          </Route>
+          <Route exact path='/formularioTema/:id'>
+            <CadastroTema />
+          </Route>
         </div>
       </Switch>
-
       <Footer />
     </Router>
     </div>
