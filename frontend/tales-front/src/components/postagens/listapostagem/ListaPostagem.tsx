@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@mui/material';
 import useLocalStorage from 'react-use-localstorage';
 import { busca, post, } from '../../../services/Service';
 import Postagem from '../../../models/Postagem';
@@ -34,29 +34,31 @@ function ListaPostagem() {
     }, [posts.length])
 
     return (
-        <div>
-            <Grid className="fundo-listap">
+        <div>  
+            <Grid className='fundo-listap'>
+          
                 {
                     posts.map(post => (
                         <Grid container >
-                            <Grid item xs={12} display='flex' justifyContent='center' alignItems='center' >
-                                <Box className='containerPost'>
-                                    <Box alignItems='center' justifyContent='center' width='100%'>
-                                        <Typography variant="body2" textAlign='justify' >
-                                            {post.tema?.descricao}
-                                        </Typography>
-                                        <Typography variant="h5" gutterBottom color='#224a59' align='left' justifyContent='center' textAlign='justify'>
+                            <Grid item xs={12} display='flex' justifyContent='center' alignItems='center'>
+                                <Box className='containerListPost'> 
+                                    <Box alignItems='center' justifyContent='center'>
+                                    <Typography variant="body2" textAlign='left' style={{fontWeight:'bold', color:'#224a59'}}>     
+                                            {post.usuario?.nome}
+                                    </Typography>
+                                        <Typography variant="h5" gutterBottom  align='center' justifyContent='center'>
                                             {post.titulo}
                                         </Typography>
-                                        
-                                        <Typography variant="h6" className='txtcolor' align='left' component="p" >
+                                        <Typography variant="body1" align='center' component="p" noWrap>
                                             {post.texto}
                                         </Typography>
-                                        
                                     </Box>
                                     <Box>
                                         <img src={post.imagemUrl} alt="" width="500px" />
                                     </Box>
+                                    <Typography variant="body2" textAlign='right'>  
+                                            {post.tema?.nome}
+                                    </Typography>
                                 </Box>
                             </Grid>
                         </Grid>

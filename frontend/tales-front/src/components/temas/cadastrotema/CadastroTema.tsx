@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from 'react'
-import { Container, Typography, TextField, Button, Grid, Box } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Grid, Box } from '@mui/material';
 import { useHistory, useParams } from 'react-router-dom'
 import { buscaId, post } from '../../../services/Service';
 import useLocalStorage from 'react-use-localstorage';

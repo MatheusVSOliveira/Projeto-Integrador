@@ -59,7 +59,7 @@ function CadastroUsuario() {
     return (
         <div>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="img-background" style={{backgroundColor:'#dae9ee'}}> 
-                    <Box paddingX="20px" border={1} borderRadius={9} className="boxlogin1">  
+                    <Box paddingX="20px" border={1} borderRadius={35} className="boxlogin1">   
                         <img src="https://i.imgur.com/lkhAgRt.png" alt="" className="tamanho-logo" />
                         <Box display="flex" justifyContent="center">
                             <Box marginBottom='15px'>

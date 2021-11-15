@@ -10,3 +10,9 @@
     color: #224a59 !important;
     width: 1.5em !important
 }
+
+.text-card-dev{
+    color:#224a59!important;
+    text-align: justify;
+    height: 160px;
+}

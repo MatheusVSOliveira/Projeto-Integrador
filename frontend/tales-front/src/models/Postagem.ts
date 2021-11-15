@@ -8,6 +8,7 @@ imagemUrl:    string,
 tema?:Tema|null,
 texto:string,
 titulo:string
+usuario?: User|null
 }
 
 export default Postagem;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography } from '@material-ui/core'
+import { Box, Typography } from '@mui/material' 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -25,7 +25,7 @@ function Desenvolvedores() {
                     <Typography gutterBottom variant="h5" component="div">
                         Matheus Oliveira
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" className='text-card-dev'>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugiat, quisquam illum inventore corporis deserunt aut
                         quibusdam autem laudantium itaque natus est qui unde dolorem obcaecati nisi, praesentium id officiis.
                     </Typography>
@@ -54,9 +54,8 @@ function Desenvolvedores() {
                     <Typography gutterBottom variant="h5" component="div">
                         Larissa Inacio
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugiat, quisquam illum inventore corporis deserunt aut
-                        quibusdam autem laudantium itaque natus est qui unde dolorem obcaecati nisi, praesentium id officiis.
+                    <Typography variant="body2" className='text-card-dev' > 
+                    "A imperfeição é bela, a loucura é genial e é melhor ser absolutamente ridículo do que absolutamente chato". Marilyn Monroe.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -75,16 +74,16 @@ function Desenvolvedores() {
                 <CardMedia
                     component="img"
                     height="230"
-                    image="https://i.imgur.com/uqbyXdH.jpg"
+                    image="https://i.imgur.com/ZXHCyFy.jpg"
                     alt="Desenvolvedor"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         Samantha Costa
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugiat, quisquam illum inventore corporis deserunt aut
-                        quibusdam autem laudantium itaque natus est qui unde dolorem obcaecati nisi, praesentium id officiis.
+                    <Typography variant="body2" className='text-card-dev'> 
+                    Me chamo Samantha Costa, nascida e criada no estado de São paulo desde 1999. Sou uma desenvolvedora JAVA full stack, formada pela Generation Brasil.
+                    Tenho grande apreço pelas areas de biologia e tecnologia.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -110,9 +109,9 @@ function Desenvolvedores() {
                     <Typography gutterBottom variant="h5" component="div">
                         João Pedro
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugiat, quisquam illum inventore corporis deserunt aut
-                        quibusdam autem laudantium itaque natus est qui unde dolorem obcaecati nisi, praesentium id officiis.
+                    <Typography variant="body2" className='text-card-dev'> 
+                    Sou um desenvolvedor Java Fullstack que adora inovação e tecnologia e fico feliz em trabalhar nessa 
+                    área incrível onde eu posso desenvolver projetos incríveis e a mim mesmo.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -138,9 +137,9 @@ function Desenvolvedores() {
                     <Typography gutterBottom variant="h5" component="div">
                         Richard Narumi
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugiat, quisquam illum inventore corporis deserunt aut
-                        quibusdam autem laudantium itaque natus est qui unde dolorem obcaecati nisi, praesentium id officiis.
+                    <Typography variant="body2" className='text-card-dev'>
+                    Curioso por natureza, decidi explorar esse mercado tão vasto, dinâmico, diverso e inovador que é o de tecnologia, 
+                    onde não existe um limite para a sua imaginação sendo essa a sua única barreira entre o real e virtual.
                     </Typography>
                 </CardContent>
                 <CardActions>

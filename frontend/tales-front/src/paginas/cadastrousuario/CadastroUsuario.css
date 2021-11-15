@@ -34,11 +34,12 @@
 .botao-cadastro {
     background-color: #a0c626 !important;
     border-radius: 5px !important;
-    margin: 15px !important
+    margin: 15px !important;
+    color:white !important;
 }
 .botao-cancel {
     background-color:#a0c626!important;
-    
+    color:white!important;
 }
 
 .bold {
