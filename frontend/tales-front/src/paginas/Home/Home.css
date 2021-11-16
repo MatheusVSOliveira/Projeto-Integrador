@@ -20,12 +20,14 @@
     border-radius: 50%;
 }
 .imagem-home {
-    background-image: url(https://i.imgur.com/g8J9zlN.png);
+    background-image: url(https://i.imgur.com/cVryGY1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 30vh;
-    width: 100%; 
+    width: 500px; 
+    border-radius: 5px;
+    margin-top: 20px;
 }
 .containerForm{
     flex-wrap: wrap;

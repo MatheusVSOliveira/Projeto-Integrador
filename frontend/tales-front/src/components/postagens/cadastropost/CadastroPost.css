@@ -24,3 +24,30 @@
 .txtFieldColor-post{
     color:#353535 !important; 
 }
+
+.btnColorBluecp {
+    background-color:#224a59!important
+    }
+
+.btmargem-top {
+    margin-top: 15px !important;
+}
+
+.centro-botao {
+    justify-content: right !important;
+    align-items: center !important;
+}
+
+.tamanho-t-p {
+    width: 100% !important;
+}
+
+.tamanho-t {
+    width: 50% !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.tamanho-p {
+    width: 30% !important;
+}

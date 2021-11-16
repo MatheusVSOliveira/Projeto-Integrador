@@ -89,6 +89,17 @@ function CadastroPost() {
             alert('Postagem cadastrada com sucesso');
             back()
         }
+
+        else if(id !== undefined && tema.nome != "" && postagem.titulo != "" && postagem.texto != "") {
+            post(`/postagens`, postagem, setPostagem, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            alert('Postagem atualizada com sucesso');
+            back()
+        }
+
         else {
             alert('Preencha os campos corretamente');
         }
@@ -109,12 +120,11 @@ function CadastroPost() {
                 <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" placeholder="O titulo deve ter no minimo" fullWidth multiline={true} minRows={5} className="caixatexto-color" />
                 <Typography variant="h6" className="txtFieldColor-post" marginTop="10px" align="left">Imagem</Typography>
                 <TextField value={postagem.imagemUrl} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="imagemUrl" label="imagem" name="imagemUrl" variant="outlined" placeholder="insira a url de uma imagem" fullWidth className="caixatexto-color" />
-                <FormControl className="tamanho-t-p">
+                <FormControl >
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
-                        className="tamanho-t"
                         onChange={(e) => buscaId(`/temas/${e.target.value}`, setTema, {
                             headers: {
                                 'Authorization': token
@@ -126,7 +136,8 @@ function CadastroPost() {
                             ))
                         }
                     </Select>
-                    <Button type="submit" variant="contained" color="primary" className="btnColorBluecp btmargem-top tamanho-p">
+                    <FormHelperText>Escolha um tema para a postagem</FormHelperText>
+                    <Button type="submit" variant="contained" color="primary" className='btnColorBluecp'>
                         Postar
                     </Button>
                 </FormControl>

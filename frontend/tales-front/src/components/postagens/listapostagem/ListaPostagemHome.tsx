@@ -62,22 +62,6 @@ function ListaPostagem() {
                                     <Typography variant="body2" textAlign='left'>
                                         {post.data}
                                     </Typography>
-                                    <Box display="flex" justifyContent="center" mb={1.5}>
-                                    <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
-                                        <Box mx={1}>
-                                            <Button variant="contained" size='small' className="btnColorBlue" >
-                                                atualizar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                    <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" size='small' className="btnColorRed" >
-                                                deletar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                </Box>
                                 </Box>
                             </Grid>
                         </Grid>

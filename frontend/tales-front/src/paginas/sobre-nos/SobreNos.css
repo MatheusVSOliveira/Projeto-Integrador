@@ -59,10 +59,10 @@
 
 .img {
     background-image: url(https://i.imgur.com/Eder0sS.png?4); 
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 50vh;
-    width: 50%; 
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    min-height: 50vh !important;
+    width: 55% !important; 
 
 }
 
@@ -84,7 +84,8 @@
     background-position: center;
     background-size: cover;
     min-height: 50vh;
-    width: 35%; 
+    width: 35% !important; 
+    margin-left: 7%;
 
 }
 

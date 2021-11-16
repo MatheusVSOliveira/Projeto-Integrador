@@ -1,7 +1,7 @@
 import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Container, Typography, TextField, Button, Grid, Box } from '@mui/material';
 import { useHistory, useParams } from 'react-router-dom'
-import { buscaId, post } from '../../../services/Service';
+import { buscaId, post, put } from '../../../services/Service';
 import useLocalStorage from 'react-use-localstorage';
 import Tema from '../../../models/Tema';
 import './CadastroTema.css';
@@ -53,7 +53,7 @@ function CadastroTema() {
         e.preventDefault()
         console.log("tema " + JSON.stringify(tema))
 
-        if (id == undefined) {
+        if (id == undefined && tema.nome != '' && tema.descricao != '') {
 
             post(`/temas`, tema, setTema, {
                 headers: {
@@ -61,8 +61,22 @@ function CadastroTema() {
                 }
             })
             alert('Tema cadastrado com sucesso');
+            back()
         }
-        back()
+         else if(id != undefined && tema.nome != '' && tema.descricao != '') {
+
+            put('/temas', tema, setTema, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            alert('Tema atualizado com sucesso')
+            back()
+        }
+        else{
+            alert('Preencha os campos corretamente')
+        }
+
     }
 
     function back() {
@@ -81,7 +95,7 @@ function CadastroTema() {
                         <TextField className="caixa-de-texto-fundo margem-descricao-tema" value={tema.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="nome do tema" label="nome do tema" variant="outlined" name="nome" fullWidth />
                         <Typography variant="h6" className="txtFieldColor-post" marginTop="10px" align="left">Descrição</Typography>
                         <TextField className="caixa-de-texto-fundo margem-descricao-tema" value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descrição" variant="outlined" name="descricao" fullWidth />
-                        <Button type="submit" variant="contained" color="primary">
+                        <Button type="submit" variant="contained" color="primary" className="btnColorBluect">
                             Cadastrar
                         </Button>
                     </form>

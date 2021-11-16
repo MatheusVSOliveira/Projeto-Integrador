@@ -36,29 +36,27 @@ function ListaTema() {
   return (
     <>
       <Grid container justifyContent="center" alignItems="center" className="fundo-temas">
-        <Box className="caixa-tema-titulo">
-          <Typography variant="h3">
-            Temas
-          </Typography>
-        </Box>
-        <Box display="flex" flexWrap="wrap" justifyContent="center" alignItems="center">
-          {
-            temas.map(tema => (
-              <Box m={7} >
-                <Card variant="outlined" >
-                  <CardContent>
-                    <Typography variant="h4" component="h2" className="margem-tema">
-                      {tema.nome}
-                    </Typography>
-                    <Typography variant="h6" component="h2">
-                      {tema.descricao}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Box>
-            ))
-          }
-        </Box>
+        
+        <Grid display="flex" item xs={12} flexDirection="row">
+          <Box display="flex" flexWrap="wrap" justifyContent="center" alignItems="center" width="100%">
+            {
+              temas.map(tema => (
+                <Box m={7} width="40%">
+                  <Card variant="outlined" >
+                    <CardContent>
+                      <Typography variant="h4" component="h2" className="margem-tema">
+                        {tema.nome}
+                      </Typography>
+                      <Typography variant="h6" component="h2">
+                        {tema.descricao}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Box>
+              ))
+            }
+          </Box>
+        </Grid>
       </Grid>
     </>
   );

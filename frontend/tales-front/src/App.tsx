@@ -14,59 +14,67 @@ import ListaTema from './components/temas/listatema/ListaTema';
 import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
 import CadastroPost from './components/postagens/cadastropost/CadastroPost';
 import ListaTemaAdmin from './components/temas/listatema/ListaTemaAdmin';
+import DeletarTema from './components/temas/deletartema/DeletarTema';
+import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 
 function App() {
   return (
     <div className="App">
-     <Router>
-      <Navbar />
+      <Router>
+        <Navbar />
 
-      <Switch>
-        <div style={{ minHeight: "100vh" }}>
-        <Route exact path="/">
-            <Login />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
+        <Switch>
+          <div style={{ minHeight: "100vh" }}>
+            <Route exact path="/">
+              <Login />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
 
-          <Route path="/home">
-            <Home />
-          </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
 
-          <Route path="/sobre-nos">
-            <SobreNos/>
-          </Route>
-          <Route path="/cadastrousuario">
-          <CadastroUsuario />
-          </Route>
+            <Route path="/sobre-nos">
+              <SobreNos />
+            </Route>
+            <Route path="/cadastrousuario">
+              <CadastroUsuario />
+            </Route>
 
-          <Route path='/temas'>
-            <ListaTema />
-          </Route>
-          <Route path='/temasadmin'>
-            <ListaTemaAdmin />
-          </Route>
-          <Route path='/posts'>
-            <ListaPostagem />
-          </Route>
+            <Route path='/temas'>
+              <ListaTema />
+            </Route>
+            <Route path='/temasadmin'>
+              <ListaTemaAdmin />
+            </Route>
+            <Route path='/posts'>
+              <ListaPostagem />
+            </Route>
 
-          <Route exact path='/formularioPostagem'>
-            <CadastroPost />
+            <Route exact path='/formularioPostagem'>
+              <CadastroPost />
+            </Route>
+            <Route exact path='/formularioPostagem/:id'>
+              <CadastroPost />
+            </Route>
+            <Route exact path='/formularioTema'>
+              <CadastroTema />
+            </Route>
+            <Route exact path='/formularioTema/:id'>
+              <CadastroTema />
+            </Route>
+            <Route path='/deletarTema/:id'>
+              <DeletarTema />
+              <Route path='/deletarPostagem/:id'>
+            <DeletarPostagem />
           </Route>
-          <Route exact path='/formularioPostagem/:id'>
-            <CadastroPost />
-          </Route>
-          <Route exact path='/formularioTema'>
-            <CadastroTema />
-          </Route>
-          <Route exact path='/formularioTema/:id'>
-            <CadastroTema />
-          </Route>
-        </div>
-      </Switch>
-      <Footer />
-    </Router>
+            </Route>
+          </div>
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }

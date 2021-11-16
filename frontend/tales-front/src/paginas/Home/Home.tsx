@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import ListaPostagem from '../../components/postagens/listapostagem/ListaPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import ListaPostagemHome from '../../components/postagens/listapostagem/ListaPostagemHome';
 
 
 function Home() {
@@ -21,8 +22,8 @@ function Home() {
         <>
             <Grid container direction='row' justifyContent="center" className='fundo-home' display='flex'>
                 <Grid item xs={2}>
-                    <Box display="flex" className="containerHome" >
-                    <Box style={{ width:'100%', borderRadius:'15px'}}>    
+                    <Box display="flex" className="containerHome" marginRight="20px">
+                    <Box style={{ width:'100%', borderRadius:'15px'}} >    
                             <img src="https://i.imgur.com/fbO3Y7f.jpg" alt="" className='imgPost'/>   
                         </Box>
                         <Typography variant="h5" marginBottom="20px"> Nome usuário</Typography>
@@ -33,7 +34,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} justifyContent='center' alignItems='center'>
-                    <Box display='flex' className='containerForm' height='5%'>
+                    <Box display='flex' className='containerForm' height='8%'>
                         <Box justifyContent='left' width='20%' >
                             <img src="https://i.imgur.com/fbO3Y7f.jpg" alt="" className='imgPost'/>     
                         </Box>
@@ -42,16 +43,15 @@ function Home() {
                         </Box>
                     </Box>
                   <Box marginBottom={15}> 
-                  <ListaPostagem />
+                  <ListaPostagemHome />
                   </Box>   
                 </Grid>
-                <Grid item xs={2}>
-                    <Box display="flex" className="containerHome" >
+                <Grid item xs={3}>
+                    <Box display="flex" className="containerHome" marginLeft="20px" >
                         <Typography variant="h4" marginBottom="20px"> Deixe aqui suas ideias</Typography>
-                        <Typography variant="h6" marginX="10px" textAlign="center"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Dolor totam reiciendis repellendus dolorem temporibus consequuntur iusto
-                            debitis, fugit voluptatum ea pariatur debitis, fugit voluptatum ea pariatur sequi veritatis facilis
-                            quasi asperiores? Praesentium dolorum eum eos!</Typography>
+                        <Typography variant="h6" marginX="10px" textAlign="justify">  
+                        Compartilhe informações e ideias que ajudem na luta para que todos os brasileiros possam ter acesso á água potável e saneamento básico pois esses são direitos fundamentais á vida.
+                        </Typography>
                         <Box className="imagem-home"></Box>
                     </Box>
                 </Grid>
