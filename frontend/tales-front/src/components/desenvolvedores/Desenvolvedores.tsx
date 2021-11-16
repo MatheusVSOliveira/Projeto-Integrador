@@ -26,8 +26,9 @@ function Desenvolvedores() {
                         Matheus Oliveira
                     </Typography>
                     <Typography variant="body2" className='text-card-dev'>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugiat, quisquam illum inventore corporis deserunt aut
-                        quibusdam autem laudantium itaque natus est qui unde dolorem obcaecati nisi, praesentium id officiis.
+                    Formado em Ciências Biológicas, sempre fui fascinado pela natureza e os seu componentes, mas 
+                    buscando me reinventar, encontrei a área de tecnologia e junto a ela uma paixão que me tornou 
+                    um desenvolvedor.
                     </Typography>
                 </CardContent>
                 <CardActions>

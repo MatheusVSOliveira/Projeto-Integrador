@@ -3,7 +3,7 @@ import User from './User';
 
 interface Postagem{
 data: string,
-id:    number,
+id: number,
 imagemUrl:    string,
 tema?:Tema|null,
 texto:string,
@@ -11,4 +11,4 @@ titulo:string
 usuario?: User|null
 }
 
-export default Postagem;
+export default Postagem; 

@@ -34,7 +34,7 @@ function SobreNos() {
                             ODS 6
                         </Typography>
                         <Typography variant="h5" className='txtcolor' textAlign='justify'>
-                        Em 2030, um dos parâmetros da ODS 6 é melhorar a qualidade da água, reduzir a poluição, eliminar e minimizar o despejo de produtos químicos e materiais perigosos, reduzir pela metade a proporção de águas residuais não tratadas, aumentar significativamente a reciclagem e reutilização com segurança, alcançar um justo acesso ao saneamento e higiene pessoal para todos e acabar com a defecação a céu aberto, com atenção especial às necessidades das mulheres e meninas e pessoas em situação de vulnerabilidade.
+                        Até 2030, as metas do ODS 6 é melhorar a qualidade da água, reduzir a poluição, eliminar e minimizar o despejo de produtos químicos e materiais perigosos, reduzir pela metade a proporção de águas residuais não tratadas, aumentar significativamente a reciclagem e reutilização com segurança, alcançar um justo acesso ao saneamento e higiene pessoal para todos e acabar com a defecação a céu aberto, com atenção especial às necessidades das mulheres e meninas e pessoas em situação de vulnerabilidade.
 
                         </Typography>
                     </Box>
@@ -48,9 +48,9 @@ function SobreNos() {
                             Objetivo
                         </Typography>
                         <Typography variant="h5" className='txtcolor'  textAlign='justify'>
-                        Decidimos criar o Tales uma rede social voltada para problemas hídricos, com o objetivo de divulgar as carências, poluição de rios e afluentes e a falta de 
-                        infraestrutura sendo esse um espaço onde a defesa da água e da vida sejam nossa principal prioridade, lutando para que ela chegue a todas as pessoas como garante 
-                        a constituição nacional de 1988 que garante a água como direito e garantia fundamental
+                        Decidimos criar o Tales, uma rede social voltada para os problemas hídricos, com o objetivo de divulgar as carências, a poluição de rios e afluentes e a falta de 
+                        infraestrutura, sendo esse um espaço onde a defesa da água e da vida sejam nossa principal prioridade, lutando para que ela chegue a todas as pessoas como garante 
+                        a constituição nacional de 1988, a água como direito e garantia fundamental.
                                          Tales, um "defensor social".
                         </Typography>
                     </Box>

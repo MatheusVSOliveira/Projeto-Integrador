@@ -13,6 +13,7 @@ import CadastroTema from './components/temas/cadastrotema/CadastroTema';
 import ListaTema from './components/temas/listatema/ListaTema';
 import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
 import CadastroPost from './components/postagens/cadastropost/CadastroPost';
+import ListaTemaAdmin from './components/temas/listatema/ListaTemaAdmin';
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
 
           <Route path='/temas'>
             <ListaTema />
+          </Route>
+          <Route path='/temasadmin'>
+            <ListaTemaAdmin />
           </Route>
           <Route path='/posts'>
             <ListaPostagem />

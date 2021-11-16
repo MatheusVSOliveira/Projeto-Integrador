@@ -78,7 +78,7 @@ function CadastroTema() {
                     <form onSubmit={onSubmit}>
                         <Typography variant="h3" color="textSecondary" component="h1" align="center" className="text1 margem-descricao-tema" >Formulário de cadastro tema</Typography>
                         <Typography variant="h6" className="txtFieldColor-post" marginTop="10px" align="left">Titulo</Typography>
-                        <TextField className="caixa-de-texto-fundo margem-descricao-tema" value={tema.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="nome do tema" label="nome do tema" variant="outlined" name="nome do tema" fullWidth />
+                        <TextField className="caixa-de-texto-fundo margem-descricao-tema" value={tema.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="nome do tema" label="nome do tema" variant="outlined" name="nome" fullWidth />
                         <Typography variant="h6" className="txtFieldColor-post" marginTop="10px" align="left">Descrição</Typography>
                         <TextField className="caixa-de-texto-fundo margem-descricao-tema" value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descrição" variant="outlined" name="descricao" fullWidth />
                         <Button type="submit" variant="contained" color="primary">

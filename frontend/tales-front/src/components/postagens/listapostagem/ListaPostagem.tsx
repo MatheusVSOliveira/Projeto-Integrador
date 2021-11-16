@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@mui/material';
+import { useHistory } from 'react-router-dom'
+import { Box, Typography, Grid } from '@mui/material';
 import useLocalStorage from 'react-use-localstorage';
 import { busca, post, } from '../../../services/Service';
 import Postagem from '../../../models/Postagem';
@@ -58,6 +58,9 @@ function ListaPostagem() {
                                     </Box>
                                     <Typography variant="body2" textAlign='right'>  
                                             {post.tema?.nome}
+                                    </Typography>
+                                    <Typography variant="body2" textAlign='left'>  
+                                            {post.data} 
                                     </Typography>
                                 </Box>
                             </Grid>

@@ -16,7 +16,7 @@ function CadastroPost() {
 
     useEffect(() => {
         if (token == "") {
-            alert("VocÃª precisa estar logado")
+            alert("Você precisa estar logado")
             history.push("/login")
 
         }
@@ -32,7 +32,7 @@ function CadastroPost() {
         id: 0,
         titulo: '',
         texto: '',
-        imagemUrl: '',
+        imagemUrl: '', 
         data: '',
         tema: null
     })
