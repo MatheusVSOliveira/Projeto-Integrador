@@ -2,21 +2,36 @@
 import './Home.css';
 import { Typography, Box, Grid } from '@mui/material';
 import { useHistory } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import ListaPostagem from '../../components/postagens/listapostagem/ListaPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import ListaPostagemHome from '../../components/postagens/listapostagem/ListaPostagemHome';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
+import {toast} from 'react-toastify';
+import ListaTemaAdmin from '../../components/temas/listatema/ListaTemaAdmin';
 
 
 function Home() {
 
     let history = useHistory();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+    
     useEffect(() => {
         if (token == '') {
-            alert("Você precisa estar logado!")
+            toast.error('Você precisa estar logado!', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false, 
+                draggable: false, 
+                theme: 'colored', 
+                progress: undefined 
+            })
             history.push('/login')
-        }
+        } 
     }, [token])
     return (
         <>
@@ -56,6 +71,7 @@ function Home() {
                     </Box>
                 </Grid>
             </Grid>
+            
 
         </>
     )
