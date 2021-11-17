@@ -48,11 +48,11 @@ function CadastroUsuario() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        if (user.senha.length >= 8  && confirmarSenha == user.senha) {
+        if (user.senha.length >= 8  && user.nome.length > 2 && confirmarSenha == user.senha) {
             cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
             alert('Usuario cadastrado com sucesso')
         } else {
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.') 
+            alert('Preencha os campos corretamente') 
         }
     }
 
@@ -67,7 +67,7 @@ function CadastroUsuario() {
                                     <Typography  className='txtFieldColor' align="left">Nome</Typography>
                                     <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="nome" label="digite seu nome" variant="outlined" name="nome" fullWidth className="campo-de-texto1" />
                                     <Typography className='txtFieldColor' align="left">Usuario</Typography>
-                                    <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="usuario" label="digite seu email" variant="outlined" name="usuario" fullWidth className="campo-de-texto1" />
+                                    <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="usuario" label="digite seu email" variant="outlined" name="usuario" fullWidth className="campo-de-texto1" placeholder='exemplo@email.com'/>
                                     <Typography className='txtFieldColor' align="left">Tipo de usuario</Typography>
                                     <TextField value={user.tipoUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="tipoUsuario" label="digite o tipo de usuario" variant="outlined" name="tipoUsuario" fullWidth className="campo-de-texto1" />
                                 </form>
@@ -75,7 +75,7 @@ function CadastroUsuario() {
                             <Box className="boxlogin2">
                                 <form onSubmit={onSubmit}>
                                     <Typography className='txtFieldColor' align="left">Senha</Typography>
-                                    <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="digite sua senha" variant="outlined" name="senha" type="password" fullWidth className="campo-de-texto2" />
+                                    <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="digite sua senha" variant="outlined" name="senha" type="password" fullWidth className="campo-de-texto2" placeholder='Min 8 caracteres'/>
                                     <Typography className='txtFieldColor'  align="left">Confirmar senha</Typography>
                                     <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id="confirmarSenha" label="confirmar senha" variant="outlined" name="confirmarSenha" type="password" fullWidth className="campo-de-texto2" />
                                 </form>

@@ -5,6 +5,8 @@ import useLocalStorage from 'react-use-localstorage';
 import { busca, post, } from '../../../services/Service';
 import Postagem from '../../../models/Postagem';
 import "./ListaPostagem.css";
+import ModeEditIcon from '@mui/icons-material/ModeEdit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function ListaPostagem() {
     const [posts, setPosts] = useState<Postagem[]>([])
@@ -62,22 +64,24 @@ function ListaPostagem() {
                                     <Typography variant="body2" textAlign='left'>
                                         {post.data}
                                     </Typography>
-                                    <Box display="flex" justifyContent="center" mb={1.5}>
-                                    <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
-                                        <Box mx={1}>
-                                            <Button variant="contained" size='small' className="btnColorBlue" >
-                                                atualizar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                    <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" size='small' className="btnColorRed" >
-                                                deletar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                </Box>
+                                    <Box display="flex" justifyContent="right" mb={1.2}>
+                                        <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
+                                            <Box>
+
+                                                <a href="" target="_blank">
+                                                    <ModeEditIcon className='iconListaPost' />
+                                                </a>
+
+                                            </Box>
+                                        </Link>
+                                        <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
+                                            <Box>
+                                                <a href="" target="_blank">
+                                                    <DeleteIcon className='iconListaPost2' />
+                                                </a>
+                                            </Box>
+                                        </Link>
+                                    </Box>
                                 </Box>
                             </Grid>
                         </Grid>

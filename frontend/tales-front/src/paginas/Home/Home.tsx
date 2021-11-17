@@ -47,7 +47,7 @@ function Home() {
                   </Box>   
                 </Grid>
                 <Grid item xs={3}>
-                    <Box display="flex" className="containerHome" marginLeft="20px" >
+                    <Box display="flex" className="containerHome" marginLeft="20px"  minHeight='600px'  >
                         <Typography variant="h4" marginBottom="20px"> Deixe aqui suas ideias</Typography>
                         <Typography variant="h6" marginX="10px" textAlign="justify">  
                         Compartilhe informações e ideias que ajudem na luta para que todos os brasileiros possam ter acesso á água potável e saneamento básico pois esses são direitos fundamentais á vida.

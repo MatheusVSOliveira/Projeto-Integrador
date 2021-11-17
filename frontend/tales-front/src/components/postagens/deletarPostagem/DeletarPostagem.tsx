@@ -54,7 +54,7 @@ function DeletarPostagem() {
           <Box  className='containerListPost'> 
             <Box alignItems='center' justifyContent='center'>
               <Typography variant="h5" gutterBottom>
-                Deseja deletar a Postagem? 
+                Deseja excluir a postagem? 
               </Typography>
               <Typography variant="h6" gutterBottom align='center' justifyContent='center'>
                 {post?.titulo}

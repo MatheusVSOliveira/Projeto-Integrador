@@ -36,48 +36,45 @@ function ListaTema() {
   return (
     <>
       <Grid container justifyContent="center" alignItems="center" className="fundo-temas">
-        <Box className="caixa-tema-titulo">
-          <Typography variant="h3">
-            Temas
-          </Typography>
-        </Box>
-        <Box display="flex" flexWrap="wrap" justifyContent="center" alignItems="center">
-          {
-            temas.map(tema => (
-              <Box m={7} >
-                <Card variant="outlined" >
-                  <CardContent>
-                    <Typography variant="h4" component="h2" className="margem-tema">
-                      {tema.nome}
-                    </Typography>
-                    <Typography variant="h6" component="h2">
-                      {tema.descricao}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Box display="flex" justifyContent="center" mb={1.5} >
+        <Grid item display="flex" xs={12} flexDirection="row">
+          <Box display="flex" flexWrap="wrap" justifyContent="center" alignItems="center" width="100%">
+            {
+              temas.map(tema => (
+                <Box m={7} width="40%">
+                  <Card variant="outlined" >
+                    <CardContent>
+                      <Typography variant="h4" component="h2" className="margem-tema">
+                        {tema.nome}
+                      </Typography>
+                      <Typography variant="h6" component="h2">
+                        {tema.descricao}
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Box display="flex" justifyContent="center" alignItems="center" mb={1.5} width="100%">
 
-                      <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none-temas">
-                        <Box mx={1}>
-                          <Button variant="contained" className="marginLeft btnColorBluelt" size='small' color="primary">
-                            atualizar
-                          </Button>
-                        </Box>
-                      </Link>
-                      <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none-temas">
-                        <Box mx={1}>
-                          <Button variant="contained" size='small' color="secondary" className="btnColorRedlt">
-                            deletar
-                          </Button>
-                        </Box>
-                      </Link>
-                    </Box>
-                  </CardActions>
-                </Card>
-              </Box>
-            ))
-          }
-        </Box>
+                        <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none-temas">
+                          <Box mx={1}>
+                            <Button variant="contained" className="marginLeft btnColorBluelt" size='small' color="primary">
+                              atualizar
+                            </Button>
+                          </Box>
+                        </Link>
+                        <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none-temas">
+                          <Box mx={1}>
+                            <Button variant="contained" size='small' color="secondary" className="btnColorRedlt"> 
+                              deletar
+                            </Button>
+                          </Box>
+                        </Link>
+                      </Box>
+                    </CardActions>
+                  </Card>
+                </Box>
+              ))
+            }
+          </Box>
+        </Grid>
       </Grid>
     </>
   );

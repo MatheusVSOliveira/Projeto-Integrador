@@ -14,7 +14,7 @@ function ListaTema() {
 
   useEffect(() => {
     if (token == '') {
-      alert("VocÃª precisa estar logado")
+      alert("Você precisa estar logado")
       history.push("/login")
     }
   }, [token])

@@ -113,13 +113,13 @@ function CadastroPost() {
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h4">Postar</Typography>
+                <Typography variant="h4">Criar postagem</Typography>
                 <Typography variant="h6" className="txtFieldColor-post" marginTop="10px" align="left">Titulo</Typography>
-                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" placeholder="O titulo deve ter no minimo" fullWidth className="caixatexto-color" />
+                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" placeholder="Crie o título da sua postagem" fullWidth className="caixatexto-color" />
                 <Typography variant="h6" className="txtFieldColor-post" marginTop="10px" align="left">Texto</Typography>
-                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" placeholder="O titulo deve ter no minimo" fullWidth multiline={true} minRows={5} className="caixatexto-color" />
+                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" placeholder="Compartilhe as suas ideias" fullWidth multiline={true} minRows={5} className="caixatexto-color" />
                 <Typography variant="h6" className="txtFieldColor-post" marginTop="10px" align="left">Imagem</Typography>
-                <TextField value={postagem.imagemUrl} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="imagemUrl" label="imagem" name="imagemUrl" variant="outlined" placeholder="insira a url de uma imagem" fullWidth className="caixatexto-color" />
+                <TextField value={postagem.imagemUrl} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="imagemUrl" label="imagem" name="imagemUrl" variant="outlined" placeholder="insira a url da imagem" fullWidth className="caixatexto-color" />
                 <FormControl >
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
                     <Select
@@ -138,7 +138,7 @@ function CadastroPost() {
                     </Select>
                     <FormHelperText>Escolha um tema para a postagem</FormHelperText>
                     <Button type="submit" variant="contained" color="primary" className='btnColorBluecp'>
-                        Postar
+                        Publicar
                     </Button>
                 </FormControl>
             </form>
