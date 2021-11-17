@@ -49,27 +49,39 @@ function DeletarPostagem() {
   }
   return (
     <>
-      <Grid container className='fundo-listap'>
-        <Grid item xs={12} display='flex' justifyContent='center' alignItems='center'>
-          <Box  className='containerListPost'> 
+      <Grid container xs={12} className='fundo-listap' justifyContent='center' alignItems='center'>
+        <Grid item xs={6} display='flex' justifyContent='center' alignItems='center'>
+          <Box className='containerListPost'>
             <Box alignItems='center' justifyContent='center'>
               <Typography variant="h5" gutterBottom>
-                Deseja excluir a postagem? 
+                Deseja excluir a postagem?
               </Typography>
-              <Typography variant="h6" gutterBottom align='center' justifyContent='center'>
+              <Typography variant="body2" textAlign='left' style={{ fontWeight: 'bold', color: 'black' }}>
+                {post?.usuario?.nome}
+              </Typography>
+              <Typography variant="h5" gutterBottom align='center' justifyContent='center'>
                 {post?.titulo}
               </Typography>
               <Typography variant="body1" align='center' component="p" noWrap>
                 {post?.texto}
               </Typography>
             </Box>
+            <Box>
+              <img src={post?.imagemUrl} alt="" width="500px" />
+            </Box>
+            <Typography variant="body2" textAlign='right'>
+              {post?.tema?.nome}
+            </Typography>
+            <Typography variant="body2" textAlign='left'>
+              {post?.data}
+            </Typography>
             <Box display="flex" justifyContent="center" >
-              <Box mx={2} my={5}>
+              <Box mx={2} my={2}>
                 <Button onClick={sim} variant="contained" className="btnColorBlue" size='large' color="primary">
                   Sim
                 </Button>
               </Box>
-              <Box mx={2} my={5}>
+              <Box mx={2} my={2}>
                 <Button onClick={nao} variant="contained" size='large' color='primary' className="btnColorRed">
                   Não
                 </Button>

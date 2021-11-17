@@ -13,16 +13,16 @@ import './Desenvolvedores.css';
 
 function Desenvolvedores() {
     return (
-        <Box display='flex' paddingX={5} marginTop={15} justifyContent='center' flexWrap='wrap'>
-            <Card sx={{ maxWidth: 250 }} style={{ margin: '30px' }}>
+        <Box display='flex' paddingX={3} marginTop={5} justifyContent='center'>
+            <Card sx={{ maxWidth: 220 }} style={{ margin: '10px' }}>
                 <CardMedia
                     component="img"
-                    height="230"
+                    height="200"
                     image="https://i.imgur.com/9VSrhzV.jpg"
                     alt="Desenvolvedor"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" component="div" className='fonte-nome'>
                         Matheus Oliveira
                     </Typography>
                     <Typography variant="body2" className='text-card-dev'>
@@ -44,15 +44,15 @@ function Desenvolvedores() {
             </Card>
 
 
-            <Card sx={{ maxWidth: 250 }} style={{ margin: '30px' }}>
+            <Card sx={{ maxWidth: 220 }} style={{ margin: '10px' }}>
                 <CardMedia
                     component="img"
-                    height="230"
+                    height="200"
                     image="https://i.imgur.com/SeyY8nA.jpg"
                     alt="Desenvolvedor"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" component="div" className='fonte-nome'>
                         Larissa Inacio
                     </Typography>
                     <Typography variant="body2" className='text-card-dev' > 
@@ -71,15 +71,15 @@ function Desenvolvedores() {
                 </CardActions>
             </Card>
 
-            <Card sx={{ maxWidth: 250 }} style={{ margin: '30px' }}>
+            <Card sx={{ maxWidth: 220 }} style={{ margin: '10px' }}>
                 <CardMedia
                     component="img"
-                    height="230"
+                    height="200"
                     image="https://i.imgur.com/ZXHCyFy.jpg"
                     alt="Desenvolvedor"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" component="div" className='fonte-nome'>
                         Samantha Costa
                     </Typography>
                     <Typography variant="body2" className='text-card-dev'> 
@@ -99,15 +99,15 @@ function Desenvolvedores() {
                 </CardActions>
             </Card>
 
-            <Card sx={{ maxWidth: 250 }} style={{ margin: '30px' }}>
+            <Card sx={{ maxWidth: 220 }} style={{ margin: '10px' }}>
                 <CardMedia
                     component="img"
-                    height="230"
+                    height="200"
                     image="https://i.imgur.com/WXmbb8E.jpg"
                     alt="Desenvolvedor"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" component="div" className='fonte-nome'>
                         João Pedro
                     </Typography>
                     <Typography variant="body2" className='text-card-dev'> 
@@ -127,15 +127,15 @@ function Desenvolvedores() {
                 </CardActions>
             </Card>
 
-            <Card sx={{ maxWidth: 250 }} style={{ margin: '30px' }}>
+            <Card sx={{ maxWidth: 220 }} style={{ margin: '10px' }}>
                 <CardMedia
                     component="img"
-                    height="230"
+                    height="200"
                     image="https://i.imgur.com/1HkrPQx.jpg"
                     alt="Desenvolvedor"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" component="div" className='fonte-nome'>
                         Richard Narumi
                     </Typography>
                     <Typography variant="body2" className='text-card-dev'>

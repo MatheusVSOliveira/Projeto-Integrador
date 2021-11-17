@@ -42,7 +42,7 @@ function ListaTema() {
             {
               temas.map(tema => (
                 <Box m={7} width="40%">
-                  <Card variant="outlined" >
+                  <Card>
                     <CardContent>
                       <Typography variant="h4" component="h2" className="margem-tema">
                         {tema.nome}

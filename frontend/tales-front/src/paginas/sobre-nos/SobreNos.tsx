@@ -6,13 +6,14 @@ import CarouselComponent from '../../components/carossel/CarouselComponent';
 
 
 
+
 function SobreNos() {
     return (
         <Grid container className='caixaPrincipal'>
             <Grid item xs={12} display='flex' justifyContent='center' alignItems='center' >
                 <Box className='container1'>
                     <Box alignItems='center' justifyContent='center' width='45%'> 
-                        <Typography variant="h3" gutterBottom color='#224a59' align='center' justifyContent='center'>
+                        <Typography variant="h3" className='txtcolor' gutterBottom color='#224a59' align='center' justifyContent='center'>
                             Sobre nós
                         </Typography>
                         <Typography variant="h5" className='txtcolor'  textAlign='justify'>
@@ -30,7 +31,7 @@ function SobreNos() {
                 <Box className='container2'>
                     <Box width='45%' className='img2'></Box>
                     <Box alignItems='center' justifyContent='center' width='45%'>
-                        <Typography variant="h3" gutterBottom color='#224a59' align='center' justifyContent='center'>
+                        <Typography variant="h3" gutterBottom color='#224a59' align='center' justifyContent='center' className='txtcolor'>
                             ODS 6
                         </Typography>
                         <Typography variant="h5" className='txtcolor' textAlign='justify'>
@@ -44,7 +45,7 @@ function SobreNos() {
             <Grid item xs={12} display='flex' justifyContent='center' alignItems='center'>
                 <Box className='container3'>
                     <Box alignItems='center' justifyContent='center' width="45%">
-                        <Typography variant="h3" gutterBottom color='#224a59' align='center' justifyContent='center'>
+                        <Typography variant="h3" gutterBottom color='#224a59' align='center' justifyContent='center' className='txtcolor'>
                             Objetivo
                         </Typography>
                         <Typography variant="h5" className='txtcolor'  textAlign='justify'>
@@ -65,7 +66,7 @@ function SobreNos() {
                     </Box>
                 </Box>
             </Grid>
-            <Grid item xs={12} display='flex' justifyContent='center' alignItems='center'>  
+            <Grid item xs={12} display='flex' justifyContent='center' alignItems='center'className='txtcolor'>  
                 <Desenvolvedores />
             </Grid>
         </Grid>
