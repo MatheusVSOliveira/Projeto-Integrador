@@ -31,18 +31,15 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
-
             <Route path="/home">
               <Home />
             </Route>
-
             <Route path="/sobre-nos">
               <SobreNos />
             </Route>
             <Route path="/cadastrousuario">
               <CadastroUsuario />
             </Route>
-
             <Route path='/temas'>
               <ListaTema />
             </Route>
@@ -52,7 +49,6 @@ function App() {
             <Route path='/posts'>
               <ListaPostagem />
             </Route>
-
             <Route exact path='/formularioPostagem'>
               <CadastroPost />
             </Route>
@@ -67,9 +63,9 @@ function App() {
             </Route>
             <Route path='/deletarTema/:id'>
               <DeletarTema />
-              <Route path='/deletarPostagem/:id'>
-            <DeletarPostagem />
-          </Route>
+            </Route>
+            <Route path='/deletarPostagem/:id'>
+              <DeletarPostagem />
             </Route>
           </div>
         </Switch>

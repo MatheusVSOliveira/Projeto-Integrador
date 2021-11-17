@@ -89,6 +89,17 @@ function CadastroPost() {
             alert('Postagem cadastrada com sucesso');
             back()
         }
+
+        else if(id !== undefined && tema.nome != "" && postagem.titulo != "" && postagem.texto != "") {
+            post(`/postagens`, postagem, setPostagem, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            alert('Postagem atualizada com sucesso');
+            back()
+        }
+
         else {
             alert('Preencha os campos corretamente');
         }
@@ -98,6 +109,7 @@ function CadastroPost() {
     function back() {
         history.push('/posts')
     }
+
 
     return (
         <Container maxWidth="sm" className="topo">
