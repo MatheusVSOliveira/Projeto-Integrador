@@ -7,6 +7,7 @@ import './CadastroTema.css';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import ListaTemaAdmin from '../listatema/ListaTemaAdmin';
 
 
 function CadastroTema() {
@@ -142,7 +143,7 @@ function CadastroTema() {
                     </form>
                 </Box>
             </Grid>
-
+            <ListaTemaAdmin />
         </Grid>
     )
 }

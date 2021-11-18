@@ -5,7 +5,7 @@ import { login } from '../../services/Service';
 import './Login.css';
 import UserLogin from '../../models/UserLogin';
 import { useDispatch } from 'react-redux';
-import { addToken } from '../../store/tokens/actions';
+import { addName, addTipoUsuario, addToken } from '../../store/tokens/actions';
 import {toast} from 'react-toastify';
 
 
@@ -14,57 +14,76 @@ function Login() {
 
     let history = useHistory();
     const dispatch = useDispatch();
-    const [token,setToken] = useState(''); 
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
+            nome:'',
             usuario: '',
+            tipoUsuario: '',
+            senha: '',
+            token: ''
+        }
+    )
+
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            nome:'',
+            usuario:'',
+            tipoUsuario: '',
             senha: '',
             token: ''
         }
     )
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+
         setUserLogin({
             ...userLogin,
             [e.target.name]: e.target.value
         })
     }
 
-    useEffect(()=> {
-        if(token != ''){
-            dispatch(addToken(token))
+
+
+    useEffect(() => {
+       
+        if (respUserLogin.token != '') {
+            dispatch(addToken(respUserLogin.token));
+            dispatch(addName(respUserLogin.nome));
+            dispatch(addTipoUsuario(respUserLogin.tipoUsuario));
             history.push('/home')
         }
-    }, [token]) 
+    }, [respUserLogin.token])
+    
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(`/usuarios/logar`, userLogin, setToken)
+            await login(`/usuarios/logar`, userLogin, setRespUserLogin)
             toast.success('Usuário logado com sucesso!', {
-                position: 'top-right',
+                position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false, 
-                draggable: false, 
-                theme: 'colored', 
-                progress: undefined
-              })
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         } catch (error) {
-            toast.error('Dados inconsistentes. Erro ao logar!', {
-                position: 'top-right',
+            toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+                position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false, 
-                draggable: false, 
-                theme: 'colored', 
-                progress: undefined
-            })
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         }
-        /*console.log('userLogin: ' + Object.values(userLogin));*/
+        console.log('userLogin: ' + Object.values(userLogin)) 
     }
 
     return (

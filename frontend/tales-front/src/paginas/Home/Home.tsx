@@ -2,13 +2,12 @@
 import './Home.css';
 import { Typography, Box, Grid } from '@mui/material';
 import { useHistory } from 'react-router-dom';
-import ListaPostagem from '../../components/postagens/listapostagem/ListaPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import ListaPostagemHome from '../../components/postagens/listapostagem/ListaPostagemHome';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import {toast} from 'react-toastify';
-import ListaTemaAdmin from '../../components/temas/listatema/ListaTemaAdmin';
+
 
 
 function Home() {
@@ -17,14 +16,19 @@ function Home() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
       );
-    
+      const nome = useSelector<TokenState, TokenState["names"]>(
+        (state) => state.names
+    );
+    const tipoUsuario = useSelector<TokenState, TokenState["tipoUsuario"]>(
+        (state) => state.tipoUsuario
+    );
     useEffect(() => {
         if (token == '') {
             toast.error('Você precisa estar logado!', {
                 position: 'top-right',
                 autoClose: 2000,
                 hideProgressBar: false,
-                closeOnClick: true,
+                closeOnClick: true, 
                 pauseOnHover: false, 
                 draggable: false, 
                 theme: 'colored', 
@@ -41,7 +45,7 @@ function Home() {
                     <Box style={{ width:'100%', borderRadius:'15px'}} >    
                             <img src="https://i.imgur.com/fbO3Y7f.jpg" alt="" className='imgPost'/>   
                         </Box>
-                        <Typography variant="h5" marginBottom="20px"> Nome usuário</Typography>
+                        <Typography variant="h5" marginBottom="20px"> {tipoUsuario} </Typography>
                         <Typography variant="h6" marginX="10px" textAlign="center"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Dolor totam reiciendis repellendus dolorem temporibus consequuntur iusto
                             debitis, fugit voluptatum ea pariatur debitis, fugit voluptatum ea pariatur sequi veritatis facilis

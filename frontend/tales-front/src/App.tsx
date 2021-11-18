@@ -11,7 +11,6 @@ import CadastroTema from './components/temas/cadastrotema/CadastroTema';
 import ListaTema from './components/temas/listatema/ListaTema';
 import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
 import CadastroPost from './components/postagens/cadastropost/CadastroPost';
-import ListaTemaAdmin from './components/temas/listatema/ListaTemaAdmin';
 import DeletarTema from './components/temas/deletartema/DeletarTema';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import { Provider } from 'react-redux';
@@ -46,9 +45,6 @@ function App() {
             </Route>
             <Route path='/temas'>
               <ListaTema />
-            </Route>
-            <Route path='/temasadmin'>
-              <ListaTemaAdmin />
             </Route>
             <Route path='/posts'>
               <ListaPostagem />
