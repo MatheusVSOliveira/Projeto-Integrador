@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './paginas/login/Login';
+import Home from './paginas/home/Home';
+import SobreNos from './paginas/sobre-nos/SobreNos';
+import Navbar from './components/estaticos/navbar/NavBar';
+import Footer from './components/estaticos/footer/Footer';
 import CadastroUsuario from './paginas/cadastrousuario/CadastroUsuario';
 import CadastroTema from './components/temas/cadastrotema/CadastroTema';
 import ListaTema from './components/temas/listatema/ListaTema';
@@ -12,11 +17,6 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import NavBar from './components/estaticos/NavBar/NavBar';
-import Login from './paginas/Login/Login';
-import Home from './paginas/Home/Home';
-import SobreNos from './paginas/sobre-nos/SobreNos';
-import Footer from './components/estaticos/Footer/Footer';
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
       <ToastContainer/> 
     <div className="App">
       <Router>
-        <NavBar />
+        <Navbar />
         <Switch>
           <div style={{ minHeight: "100vh" }}>
             <Route exact path="/">
