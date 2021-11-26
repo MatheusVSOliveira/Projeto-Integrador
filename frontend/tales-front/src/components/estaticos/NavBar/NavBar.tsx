@@ -1,23 +1,25 @@
-import React from 'react'
 import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './NavBar.css'
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
-import { addName, addTipoUsuario, addToken } from '../../../store/tokens/actions';
+import { UserState } from '../../../store/user/UserReducer';
+import { addName, addTipoUsuario, addToken } from '../../../store/user/actions';
 import { toast } from 'react-toastify';
+import HomeIcon from '@mui/icons-material/Home';
+import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
+import PostAddIcon from '@mui/icons-material/PostAdd';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
+
 
 function NavBar() {
-
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+ 
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
-    const nome = useSelector<TokenState, TokenState["names"]>(
-        (state) => state.names
-    );
-
-    const tipoUsuario = useSelector<TokenState, TokenState["tipoUsuario"]>(
+    const tipoUsuario = useSelector<UserState, UserState["tipoUsuario"]>(
         (state) => state.tipoUsuario
     );
     let history = useHistory();
@@ -42,17 +44,18 @@ function NavBar() {
 
     var navbarComponent; 
     var cadastrarTema
-    if (tipoUsuario == 'Admin') {  
+    if (tipoUsuario === 'Admin' && token !== undefined) {  
         cadastrarTema = <Link to="/formularioTema" className="text-decorator-none">
             <Box mx={1} className='cursor'>
                 <Typography variant="h6" color="inherit">
                     Cadastrar Tema
                 </Typography>
+                <PostAddIcon/>
             </Box>
         </Link>
     }
 
-    if (token != '') {
+    if (token !== '') {
         navbarComponent = <AppBar position="static" className="cor-navBar">
             <Toolbar variant="dense">
                 <Box>
@@ -65,6 +68,7 @@ function NavBar() {
                             <Typography variant="h6" color="inherit">
                                 Feed
                             </Typography>
+                            <HomeIcon/>
                         </Box>
                     </Link>
                     <Link to="/sobre-nos" className="text-decoration-none">
@@ -72,6 +76,7 @@ function NavBar() {
                             <Typography variant="h6" color="inherit">
                                 Sobre nós
                             </Typography>
+                            <LocalLibraryIcon />
                         </Box>
                     </Link>
                     <Link to="/posts" className="text-decoration-none">
@@ -79,6 +84,7 @@ function NavBar() {
                             <Typography variant="h6" color="inherit">
                                 Postagens
                             </Typography>
+                            <MenuBookIcon/>
                         </Box>
                     </Link>
                     <Link to="/temas" className="text-decoration-none">
@@ -86,6 +92,7 @@ function NavBar() {
                             <Typography variant="h6" color="inherit">
                                 Temas
                             </Typography>
+                            <DynamicFeedIcon/>
                         </Box>
                     </Link>
                     {cadastrarTema}
@@ -93,6 +100,7 @@ function NavBar() {
                         <Typography variant="h6" color="inherit">
                             Sair
                         </Typography>
+                        <ExitToAppIcon />
                     </Box>
                 </Box>
 
