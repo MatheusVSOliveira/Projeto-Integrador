@@ -34,6 +34,14 @@ public class UsuarioService {
 		return Optional.of(usuarioRepository.save(usuario));
 	}
 
+	public Optional<Usuario> atualizarUsuario(Usuario usuario) {
+
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		String senhaEncoder = encoder.encode(usuario.getSenha());
+		usuario.setSenha(senhaEncoder);
+		return Optional.of(usuarioRepository.save(usuario));
+	}
+	
 	public Optional<UsuarioLogin> autenticarUsuario(Optional<UsuarioLogin> usuarioLogin) {
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -49,6 +57,8 @@ public class UsuarioService {
 				usuarioLogin.get().setId(usuario.get().getId());
 				usuarioLogin.get().setNome(usuario.get().getNome());
 				usuarioLogin.get().setSenha(usuario.get().getSenha());
+				usuarioLogin.get().setTipoUsuario(usuario.get().getTipoUsuario());
+				usuarioLogin.get().setFoto(usuario.get().getFoto());
 				usuarioLogin.get().setToken(authHeader);
 				return usuarioLogin;
 			}
