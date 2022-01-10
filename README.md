@@ -7,7 +7,7 @@
 <div>
     <p align="center">
     <a href="https://www.linkedin.com/in/matheusvsoliveira/" target="_blank">
-        <img src="https://img.shields.io/static/v1?label=Author&message=Matheus Oliveira&color=orange&style=for-the-badge&logo=LinkedIn" alt="Author: Matheus Oliveira">
+        <img src="https://img.shields.io/static/v1?label=Authors&message=Matheus Oliveira, others&color=orange&style=for-the-badge&logo=LinkedIn" alt="Author: Matheus Oliveira">
     </a>
     <a href="#">
         <img src="https://img.shields.io/static/v1?label=Language&message=Typescript&color=blue&style=for-the-badge&logo=Typescript" alt="Language: Typescript">
