@@ -84,7 +84,7 @@
   ---
 ### 1. Clone this repository
 ```
-git clone https://github.com/MatheusVSOliveira/Projeto-blogpessoal-Spring_React.git
+git clone https://github.com/MatheusVSOliveira/ProjetoIntegrador-GenerationBrazil-Spring_React.git
 ```
 ---
 ### 2. Install the dependencies
